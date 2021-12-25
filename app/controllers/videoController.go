@@ -9,7 +9,7 @@ import (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("HELLO WORLD"))
+	w.Write([]byte("HELLO Luan Teacher"))
 
 }
 
