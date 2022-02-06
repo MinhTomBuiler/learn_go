@@ -16,8 +16,8 @@ import (
 )
 
 type Item struct {
-	Id   string
-	Path string
+	Id   string `json:"id"`
+	Path string `json:"path"`
 }
 
 func GetS3Path(w http.ResponseWriter, r *http.Request) {
