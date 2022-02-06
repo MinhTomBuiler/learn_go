@@ -11,7 +11,7 @@ import (
 func main() {
 	mux := mux.NewRouter()
 	mux.HandleFunc("/abc", controllers.Home)
-	mux.HandleFunc("/category/{phanloai}/video/{id}", controllers.ServeVideo)
+	mux.HandleFunc("/video/{id}", controllers.ServeVideo)
 
 	log.Println("Server dang khoi dong...")
 	err := http.ListenAndServe(":4000", mux) //khai bao cong
