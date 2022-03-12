@@ -11,7 +11,9 @@ import (
 func main() {
 	mux := mux.NewRouter()
 	mux.HandleFunc("/s3/{videoId}", controllers.GetS3Path)
-	mux.HandleFunc("/mysql/{userId}", controllers.GetUserMovieData)
+	mux.HandleFunc("/mysql/{movieId}", controllers.GetMovieData)
+	mux.HandleFunc("/mysql1/{userId}", controllers.GetMovieData1)
+	mux.HandleFunc("/mysql2/{usermovieId}", controllers.GetMovieData2)
 
 	log.Println("Server DB dang khoi dong...")
 	err := http.ListenAndServe(":4001", mux) //khai bao cong
